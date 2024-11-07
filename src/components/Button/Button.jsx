@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import styles from "./button.module.scss";
 
-const Button = () => {
+// use text disabled handler
+const Button = ({use, text, disabled, handler}) => {
   return (
-    <div>Button</div>
+    <button className={`${styles.btn} ${styles[`btn--${use}`]}`} onClick={handler} disabled={disabled}>
+        {text}
+    </button>
   )
 }
 
