@@ -1,8 +1,23 @@
 import React from 'react'
+import cn from 'classnames';
+import styles from './stone.module.scss'
 
-const Stone = () => {
+const Stone = ({id, color, disabled, hide, img, handler}) => {
+  // img -> t1.png
+  const classes = {
+    stone: true,
+    // ['stone--pair']: true,
+    ['stone--hide']: hide,
+  }
+
+  const clickHandler = () => {
+    handler({id,color});
+  }
+
   return (
-    <div>Stone</div>
+    <button className={cn(classes)} disabled={disabled} onClick={clickHandler}>
+      <img src={img} alt="" />
+    </button>
   )
 }
 

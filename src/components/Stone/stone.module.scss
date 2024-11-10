@@ -1,0 +1,25 @@
+.stone {
+    width: 97px;
+    height: 97px;
+    transition: all .1s;
+
+    &:hover  {
+        transform: scale(1.05);
+    }
+
+    &:disabled{
+        cursor: not-allowed;
+    }
+
+    &--pair {
+			&:disabled {
+        cursor: not-allowed;
+        filter: grayscale(0);
+        opacity: .5
+			}
+    }
+
+    &--hide {
+        filter: grayscale(1); 
+    }
+}
