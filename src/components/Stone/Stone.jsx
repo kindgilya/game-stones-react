@@ -5,13 +5,13 @@ import styles from './stone.module.scss'
 const Stone = ({id, color, disabled, hide, img, handler}) => {
   // img -> t1.png
   const classes = {
-    stone: true,
+    [styles.stone]: true,
     // ['stone--pair']: true,
-    ['stone--hide']: hide,
+    [styles['stone--hide']]: hide,
   }
 
   const clickHandler = () => {
-    handler({id,color});
+    handler({id, color});
   }
 
   return (

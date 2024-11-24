@@ -1,4 +1,4 @@
-.game{
+.game {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,4 +7,29 @@
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-size: 30px;
+    // .game__found
+
+    &__found {
+        margin-top: 10px;
+        color: #1d2920;
+        font-weight: 1000;
+    }
+
+    // .game__total
+
+    &__total {
+			// @extend &__found;
+        margin-top: 10px;
+        color: #1d2920;
+        font-weight: 1000;
+    }
+
+    // .game__field
+
+    &__field {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
 }
